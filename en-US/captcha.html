@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>CAPTCHA</title>
+  <link rel="icon" href="https://pbs.twimg.com/profile_images/1729139173292912641/thVV8lrG_400x400.jpg" 
+</head>
+<body>
+  <h1 id="header">🔒 CAPTCHA Verification</h1>
+  <div id="buttons">
+    <a class="button white-button" href="/en-US/access-denied.html">❌</a>
+    <a class="button white-button" href="/en-US/access-denied.html">❌</a>
+    <a class="button white-button" href="home.html">✅</a>
+    <a class="button white-button" href="/en-US/access-denied.html">❌</a>
+  </div>
+
+  <script>
+    // Remove ".html" from the URL
+    if (location.href.endsWith('.html')) {
+      history.replaceState({}, null, location.href.slice(0, -5));
+    }
+  </script>
+</body>
+</html>

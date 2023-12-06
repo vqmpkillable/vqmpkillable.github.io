@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Access Denied</title>
+</head>
+<body>
+    <h1 id="header">Access Denied</h1>
+    <p id="emoji">🚫</p>
+    <p>Sorry, you don't have permission to access this page.</p>
+    <h1>Why am I getting this error message?</h1>
+    <p>Your IP or network provider might have gotten blocked from this website.</p>
+    <p>A failed captcha verification test can also lead you to this error page.</p>
+    <p>Click "Go Back" to go to the previous page, or "Retry CAPTCHA" to try again the captcha verification test if you failed it.</p>
+    <a href="#" onclick="goBack()" class="button white-button">Go Back</a>
+    <a href="captcha.html" class="button white-button">Retry CAPTCHA</a>
+
+    <script>
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+
+        // Remove .html extension from the URL
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentURL = window.location.href;
+            if (currentURL.endsWith(".html")) {
+                var newURL = currentURL.slice(0, -5);
+                window.history.replaceState({}, document.title, newURL);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media</title>
+<link rel="icon" href="https://pbs.twimg.com/profile_images/1707431450264457218/MUtcNhCs_400x400.jpg" type="image/x-icon">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+  }
+  
+  #header {
+    font-size: 36px;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+  }
+  
+  #emoji {
+    font-size: 48px;
+    animation: bounceUpDown 4s infinite;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    transition: background-color 0.3s;
+    animation: popUp 0.5s ease-out;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+
+  .white-button {
+    background-color: #fff;
+    color: #333;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  /* Center the buttons */
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .centered-white-button {
+    background-color: #fff;
+    color: #333;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes bounceUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes popUp {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Remove the .html extension from the URL
+    if (window.location.pathname.endsWith(".html")) {
+      var cleanURL = window.location.pathname.slice(0, -5); // Remove the last 5 characters (.html)
+      history.replaceState({}, null, cleanURL); // Update the URL without reloading the page
+    }
+  });
+</script>
+<body>
+<div id="header">Social Media</div>
+<div class="buttons-container">
+  <a href="https://twitter.com/killablecityyy" class="button">Twitter</a>
+  <a href="https://www.tiktok.com/@vqmpkillable" class="button">TikTok</a>
+  <a href="https://www.youtube.com/@vqmpkillable" class="button">YouTube</a>
+  <a href="https://www.instagram.com/vqmpkillable" class="button">Instagram</a>
+</div>
+<a href="https://dsc.gg/360k" class="button centered-white-button">Discord Server</a>
+<a href="home.html" class="button white-button">Home</a>
+</body>
+</html>

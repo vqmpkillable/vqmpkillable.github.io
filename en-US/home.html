@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@vqmpkillable</title>
+<link rel="icon" href="https://pbs.twimg.com/profile_images/1729139173292912641/thVV8lrG_400x400.jpg" type="image/x-icon">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  #icon {
+    margin-top: 20px;
+  }
+  
+  #header {
+    font-size: 36px;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+  }
+  
+  #emoji {
+    font-size: 48px;
+    animation: bounceUpDown 4s infinite;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+  
+  .white-button {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes bounceUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+</style>
+</head>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Remove the .html extension from the URL
+    if (window.location.pathname.endsWith(".html")) {
+      var cleanURL = window.location.pathname.slice(0, -5); // Remove the last 5 characters (.html)
+      history.replaceState({}, null, cleanURL); // Update the URL without reloading the page
+    }
+  });
+</script>
+<script>
+  if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+    history.replaceState({}, document.title, "/home");
+  }
+</script>
+
+<body>
+<body
+ 
+</div>
+<div id="header">vqmpkillable</div>
+<div id="emoji">👾</div>
+<a href="https://dsc.gg/360k" class="button">Discord Server</a>
+<a href="social-media.html" class="button">Social Media</a>
+<a href="https://github.com/vqmpkillable/Projects" class="button">Projects</a>
+<a href="guess-the-number/login.html" class="button white-button">Guess the number game</a>
+<a href="tutorials.html" class="button white-button">Tutorials</a>
+</body>
+</html>
