@@ -1,0 +1,66 @@
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  #icon {
+    margin-top: 20px;
+  }
+  
+  #header {
+    font-size: 36px;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+  }
+  
+  #emoji {
+    font-size: 48px;
+    animation: bounceUpDown 4s infinite;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+  
+  .white-button {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes bounceUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
